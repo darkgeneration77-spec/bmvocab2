@@ -1,6 +1,6 @@
 # T01 — Membawa, Mengambil & Mengalihkan
 
-BM Master Vocabulary Database —小学至中学精准词汇系统。
+BM Master Vocabulary Database — 小学至中学精准词汇系统。
 
 ## A. Cara Membawa
 
@@ -88,12 +88,17 @@ BM Master Vocabulary Database —小学至中学精准词汇系统。
 
 ## Visual Dictionary
 
-T01 Visual Dictionary 共5页，每页以动作图直接建立词义记忆：
+### Page 1 — Cara Membawa
+![Page 1](./1.png)
 
-1. Page 1 — Cara Membawa
-2. Page 2 — Cara Mengambil & Memegang
-3. Page 3 — Cara Menarik, Menolak & Memindah
-4. Page 4 — Cara Mendapatkan / Mengambil
-5. Page 5 — Cara Memegang / Memeluk / Memimpin
+### Page 2 — Cara Mengambil & Memegang
+![Page 2](./2.png)
 
-> 图片文件待以二进制方式上传至 `T01/images/`。当前 GitHub 连接器只支持 UTF-8 文本文件写入，不能把本次生成的 PNG 二进制文件直接写进仓库。
+### Page 3 — Cara Menarik, Menolak & Memindah
+![Page 3](./3.png)
+
+### Page 4 — Cara Mendapatkan / Mengambil
+![Page 4](./4.png)
+
+### Page 5 — Cara Memegang / Memeluk / Memimpin
+![Page 5](./5.png)
