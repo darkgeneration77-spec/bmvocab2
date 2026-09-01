@@ -17,6 +17,8 @@ const items=[...d.querySelectorAll('.upgrade-item')];
 const cn=[['扛着物品','承担责任'],['抬起箱子','提升尊严／地位'],['拉绳子','吸引注意／兴趣'],['推开物体','拒绝建议'],['伸手够到书','达成目标'],['取得某物','取得成功'],['争抢物品','把握／争取机会'],['抱着婴儿','支持／拥护某项努力'],['牵着弟弟的手','领导组织／国家'],['支撑树枝','支持建议'],['盛装水','承担费用'],['挡住门','抑制／忍住情绪'],['移开物体','转移注意力'],['握住物体','掌握成功']];
 items.forEach((el,i)=>{if(!cn[i]||el.querySelector('.cn-line'))return;const line=d.createElement('div');line.className='cn-line';line.innerHTML='<span>'+cn[i][0]+'</span><b> → </b><strong>'+cn[i][1]+'</strong>';el.appendChild(line)});
 const style=d.createElement('style');style.textContent=`
+.hero p,.section-head p,.visual-intro p{display:none!important}
+.hero h1{margin-bottom:24px!important}.section-head{margin-bottom:18px!important}.visual-intro{padding-top:22px!important;padding-bottom:22px!important}
 .cn-line{margin-top:10px;padding-top:10px;border-top:1px dashed #444;color:#eee;font-size:18px;line-height:1.6}.cn-line b{color:#888;padding:0 8px}.cn-line strong{color:#ffd54b;font-weight:900}
 .visual-card summary{user-select:none}.visual-card[open] summary{border-bottom:1px solid #eee2d8}
 .wrap{max-width:1280px!important}.table-wrap table{min-width:1120px!important}
@@ -32,7 +34,7 @@ const style=d.createElement('style');style.textContent=`
 .table-wrap td:nth-child(5),.table-wrap th:nth-child(5){width:105px!important;text-align:center!important}
 .table-wrap .level{font-size:15px!important;padding:7px 11px!important}
 .category-title{padding:22px 24px!important}.category-title h3{font-size:27px!important}.category-title small{font-size:18px!important}.cat-no{width:48px!important;height:48px!important;font-size:19px!important}
-.section-head h2{font-size:36px!important}.section-head p{font-size:18px!important}
+.section-head h2{font-size:36px!important}
 @media(max-width:780px){.table-wrap table{min-width:1040px!important}.table-wrap th{font-size:15px!important;padding:16px!important}.table-wrap td{font-size:18px!important;padding:18px 16px!important}.table-wrap td:nth-child(1){font-size:14px!important}.table-wrap td:nth-child(2){font-size:22px!important}.table-wrap td:nth-child(3){font-size:19px!important}.table-wrap td:nth-child(4){font-size:18px!important}}
 `;d.head.appendChild(style);
 }catch(e){console.warn(e)}
