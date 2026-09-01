@@ -17,22 +17,13 @@ frame.addEventListener('load',()=>{
   try{
     const d=frame.contentDocument;
     if(!d)return;
+
     const items=[...d.querySelectorAll('.upgrade-item')];
     const cn=[
-      ['扛着物品','承担责任'],
-      ['抬起箱子','提升尊严／地位'],
-      ['拉绳子','吸引注意／兴趣'],
-      ['推开物体','拒绝建议'],
-      ['伸手够到书','达成目标'],
-      ['取得某物','取得成功'],
-      ['争抢物品','把握／争取机会'],
-      ['抱着婴儿','支持／拥护某项努力'],
-      ['牵着弟弟的手','领导组织／国家'],
-      ['支撑树枝','支持建议'],
-      ['盛装水','承担费用'],
-      ['挡住门','抑制／忍住情绪'],
-      ['移开物体','转移注意力'],
-      ['握住物体','掌握成功']
+      ['扛着物品','承担责任'],['抬起箱子','提升尊严／地位'],['拉绳子','吸引注意／兴趣'],['推开物体','拒绝建议'],
+      ['伸手够到书','达成目标'],['取得某物','取得成功'],['争抢物品','把握／争取机会'],['抱着婴儿','支持／拥护某项努力'],
+      ['牵着弟弟的手','领导组织／国家'],['支撑树枝','支持建议'],['盛装水','承担费用'],['挡住门','抑制／忍住情绪'],
+      ['移开物体','转移注意力'],['握住物体','掌握成功']
     ];
     items.forEach((el,i)=>{
       if(!cn[i]||el.querySelector('.cn-line'))return;
@@ -41,8 +32,36 @@ frame.addEventListener('load',()=>{
       line.innerHTML='<span>'+cn[i][0]+'</span><b> → </b><strong>'+cn[i][1]+'</strong>';
       el.appendChild(line);
     });
+
     const style=d.createElement('style');
-    style.textContent=`.cn-line{margin-top:7px;padding-top:7px;border-top:1px dashed #3d3d3d;color:#d6d6d6;font-size:13px}.cn-line b{color:#777;padding:0 5px}.cn-line strong{color:#ffd54b}.visual-card summary{user-select:none}.visual-card[open] summary{border-bottom:1px solid #eee2d8}`;
+    style.textContent=`
+      .cn-line{margin-top:9px;padding-top:9px;border-top:1px dashed #3d3d3d;color:#e2e2e2;font-size:15px;line-height:1.5}
+      .cn-line b{color:#777;padding:0 6px}.cn-line strong{color:#ffd54b;font-weight:900}
+      .visual-card summary{user-select:none}.visual-card[open] summary{border-bottom:1px solid #eee2d8}
+
+      .table-wrap table{min-width:900px!important}
+      .table-wrap th{font-size:14px!important;padding:15px 16px!important;letter-spacing:.02em!important}
+      .table-wrap td{font-size:16px!important;padding:16px 16px!important;line-height:1.55!important;vertical-align:middle!important}
+      .table-wrap tr{min-height:58px!important}
+      .table-wrap td:nth-child(1),.table-wrap th:nth-child(1){width:120px!important;font-size:13px!important;color:#555}
+      .table-wrap td:nth-child(2),.table-wrap th:nth-child(2){width:245px!important}
+      .table-wrap td:nth-child(2){font-size:19px!important;font-weight:950!important;color:#b90021!important;letter-spacing:.005em}
+      .table-wrap td:nth-child(3),.table-wrap th:nth-child(3){width:250px!important}
+      .table-wrap td:nth-child(3){font-size:17px!important;font-weight:650!important;color:#2a2a2a!important}
+      .table-wrap td:nth-child(4),.table-wrap th:nth-child(4){width:240px!important}
+      .table-wrap td:nth-child(4){font-size:16px!important;color:#333!important}
+      .table-wrap td:nth-child(5),.table-wrap th:nth-child(5){width:95px!important;text-align:center!important}
+      .table-wrap .level{font-size:13px!important;padding:6px 10px!important}
+      .category-title h3{font-size:23px!important}.category-title small{font-size:15px!important}
+
+      @media(max-width:780px){
+        .table-wrap table{min-width:820px!important}
+        .table-wrap th{font-size:13px!important;padding:13px 12px!important}
+        .table-wrap td{font-size:15px!important;padding:14px 12px!important}
+        .table-wrap td:nth-child(2){font-size:18px!important}
+        .table-wrap td:nth-child(3){font-size:16px!important}
+      }
+    `;
     d.head.appendChild(style);
   }catch(e){console.warn(e)}
 });
